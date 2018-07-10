@@ -10,7 +10,7 @@ contract_address = w3.toChecksumAddress("0xa7611d0d35ba4e0dcb469f2c34a5833ec4f42
 sender_address = w3.toChecksumAddress("0xea5580418af5a7b1c391a06cae709da5b0b81c9a")
 token_contract = w3.eth.contract(address=contract_address, abi=abi)
 nonce = w3.eth.getTransactionCount(sender_address, "pending")
-filename = 'xba'
+filename = 'addresses.txt'
 with open(filename) as f:
     lines = f.readlines()
 lines = [x.strip() for x in lines]
