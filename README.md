@@ -1,11 +1,11 @@
 # Ellaism ERC-20 Tutorial
 
 This guide will walk through the process of creating a token on the Ellaism network.  It will cover creating the
-smart contract with Solidity, deploying it, adding your source code to the explorer, and adding icons to mobile wallets.
+smart contract written in Solidity, deploying it, adding your source code to the explorer, and adding icons to mobile wallets.
 
 ## Requirements
 
-- Browser that supports MetaMask or some other web3 provider
+- Browser that supports [MetaMask](https://metamask.io/) or some other web3 provider
 - Python3
 - Git and GitHub Account
 - MacOS/Linux
@@ -41,24 +41,22 @@ Total number of tokens to make available. This refers to the integer part of the
 
 ### Description
 
-A brief overview of why you created the token and what your plans are for it.  This is for the wiki entry https://wiki.ellaism.org/tokens
+A brief overview of why you created the token and what your plans are for it.  This is for the [wiki entry](https://wiki.ellaism.org/tokens).
 This can be changed at any time.
 
 ### Icon
 
-This is for the mobile wallets and wiki.  A 256x256 PNG is required.  This can be changed at any time although there is a small wait time for pull requests to be approved.
+This is for the mobile wallets and wiki.  A 256x256 PNG is required.  This can be changed after the contract is deployed although there is a small wait time for pull requests to be approved.
 
 
 ## Create the contract
 
 A token is piece of code that implements set of functions who's names and parameters have all been defined by the Ethereum governing
-body.  If you want to read details about the ERC-20 specification go here:
-
-https://theethereum.wiki/w/index.php/ERC20_Token_Standard
+body.  If you want to read details [about the ERC-20 specification click here](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
 
 Wallets and other applications can call these functions in your smart contract to find out thing about the token such as it's name, total supply or to transfer tokens to other people.
 
-Use this sample code to start your own token.  https://github.com/stevemulligan/ellaism-token-example/blob/master/outdoordevs_token.sol
+Start by [downloading this sample code](https://github.com/stevemulligan/ellaism-token-example/blob/master/outdoordevs_token.sol) to your computer.  Open it in a text editor so you can make some changes.
 
 The example token doesn't have many features outside of a basic  ERC-20 token. The only additional features it provides are:
 
