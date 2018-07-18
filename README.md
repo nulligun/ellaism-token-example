@@ -159,14 +159,14 @@ https://jsonrpc.ellaism.org
 You'll need to provide your own Ella, either by mining or buying some on an exchange.  There is a [faucet on the Main Net](https://ellaism.org/bots/) but the amount it dispenses may not be enough for your purposes.
 Make sure the account you are using in MetaMask shows a balance.
 
-Now repeat the steps from **Deploy to Test Net** and your token will be deployed on the Main Net.  Make sure the **Account** field in Remix on the Run tab shows the correct address.
+Now repeat the steps from **Deploy to Test Net** and this time your token will be deployed on the Main Net.
 
 Once you confirm the transaction in MetaMask your token will be live.  It will have the same address as the one from the Test Net.
 
 
 ## Update the wiki
 
-If you want people to know about your token a good place to start is the Ellaism wiki. https://wiki.ellaism.org/tokens
+If you want people to know about your token a good place to start is the [Ellaism wiki](https://wiki.ellaism.org/tokens).
 
 To get write access on the wiki, create an account there and then ask in [Discord](https://discord.ellaism.org/) for someone to approve the account.
 
@@ -177,7 +177,7 @@ Try to follow the same format as the tokens that are already there, adding yours
 It is a good idea to publish the code for your token on the Ellaism explorer.  This adds some additional trust as the behaviour
 of the contract can easily be reviewed by others before they interact with it.
 
-Visit the explorer in a browser and search for your contract address.
+[Visit the explorer in a browser](https://explorer.ellaism.org/) and search for your contract address.
 
 Click on the Code tab and then click on the Upload Source link.
 
@@ -185,7 +185,7 @@ Fill out the form with your contract address, contract name, and copy pasta your
 of Solidity with the one you used in Remix. Use the closest match that you can find. Check the **Settings** tab in Remix to find out
 which compiler version is being used.
 
-Click the Verify button to add your source code.
+Click the Verify button to add your source code.  Search for your contract again to see that there are two new tabs, **Source** and **Contract State**.
 
 
 ## Update mobile wallets
@@ -202,18 +202,20 @@ Place your token's icon in `docs/images/tokens`.  Name the image the address of 
 Push your change to your GitHub repo an then create a pull request.
 
 There are plans to add Ellaism to the main Trust Wallet iOS and Android wallets.  If you want your token included in those
-wallets you can fork this Ellaism tokens repository.  Place your icons in `/images/`.  Name the image the address of your contract (all lower case) with a PNG extension.  Make sure the resolution is 256x256.
+wallets you can fork the [Ellaism tokens repository](https://github.com/ellaism/tokens).  Place your icons in `/images/`.  Name the image the address of your contract (all lower case) with a PNG extension.  Make sure the resolution is 256x256.
 
 Push your change to your GitHub repo an then create a pull request.  I will create a pull request to send your contact icons upstream so it will be included in the main Trust Wallet repo.
+
+The tokens repo will eventually be used by all wallets so it's a good idea to add your icons to both for the time being.
 
 
 ## Air Drop!
 
-Included in this repo is a python script that will allow you to send an air drop to a list of addresses in a text file.  The current
-address.txt file consists of 26K or so Ella addresses that had a balance over 1 as of July 10th, 2018.  Use this list, or replace it
-with one of your own.
+Included in this repo is a [python script](/give_away_tokens.py) that will allow you to send an air drop to a list of addresses in a text file.  The current
+[addresses.txt](/addresses.txt) file consists of 26K or so Ella addresses that had a balance over 1 as of July 10th, 2018.  Use this list, or replace it
+with your own.
 
-You'll then need to create a file named .env in the same place where you run give_away_tokens.py.  Here is a sample of what it should look like:
+You'll then need to create a file named .env in the same directory where you run give_away_tokens.py.  Here is a sample of what it should look like:
 
 ```
 PRIVATE_KEY=blahblahblah
@@ -254,5 +256,12 @@ Sending to all these addresses will cost about 10 Ella.
 There is something called a 'nonce' that is used to avoid duplicate transactions.  We retrieve this number from the network when the script starts,
 but then it is incremented internally for speed.  If the script ends for any reason, you might have to wait a couple minutes to wait
 for the rpc endpoint to catch up with all your transactions.  If see errors about duplicate transactions, wait a few minutes and try again.
+
+Be mindful of the load on the network when sending out large airdrops.  When I sent my ODD tokens out I broke this list into 1000 address chunks using the `split` command.
+
+
+### When Lambo?
+
+Now that you see how easy it is, you know most of these tokens should never be worth as much as lambo ;-)
 
 
