@@ -1,5 +1,9 @@
 pragma solidity ^0.4.24;
 
+//
+// Original Script From:
+// https://github.com/bokkypoobah/Tokens/blob/master/contracts/FixedSupplyToken.sol
+//
 // ----------------------------------------------------------------------------
 // 'ODD' 'Outdoor Devs Token' contract
 //
